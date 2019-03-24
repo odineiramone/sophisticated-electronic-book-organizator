@@ -2,6 +2,11 @@
 
 Sinatra app to help you to organize your book colletion 📚 🎉
 
+## Dependencies
+
+  - Ruby 2.6.2
+  - PostgreSQL 9.6
+
 ## Setup
 
   - Install dependencies
