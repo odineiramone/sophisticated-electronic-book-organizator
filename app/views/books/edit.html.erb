@@ -1,0 +1,27 @@
+<h1>Insert the form to edit an instance of your model here.</h1>
+
+<form action="/books/<%= @book.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <p>
+    <label for="book_title">Title:</label><br>
+    <input type="text" name="book[title]" id="book_title" value="<%= @book.title %>">
+  </p>
+
+  <p>
+    <label for="book_volume">Volume:</label><br>
+    <input type="text" name="book[volume]" id="book_volume" value="<%= @book.volume %>">
+  </p>
+
+  <p>
+    <label for="book_isbn">ISBN:</label><br>
+    <input type="text" name="book[isbn]" id="book_isbn" value="<%= @book.isbn %>">
+  </p>
+
+  <p>
+    <label for="book_description">Description:</label><br>
+    <textarea type="text" name="book[description]" id="book_description"></textarea>
+  </p>
+
+  <input type="submit" value="Editar livro">
+</form>

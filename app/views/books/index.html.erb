@@ -1,0 +1,23 @@
+<h1>This is the Model's index page.</h1>
+
+<table style="width: 100%">
+  <tr>
+    <th>Title</th>
+    <th>Volume</th>
+    <th>ISBN</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @books.each do |book| %>
+    <tr>
+      <td><%= book.title %></td>
+      <td><%= book.volume %></td>
+      <td><%= book.isbn %></td>
+      <td><a href="/books/<%= book.id %>">detalhes</a></td>
+      <td><a href="/books/<%= book.id %>/edit">editar</a></td>
+    </tr>
+  <% end %>
+</table>
+
+<a href="/books/new">Criar livro</a>

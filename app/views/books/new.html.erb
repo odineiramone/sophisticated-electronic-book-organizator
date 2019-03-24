@@ -1,0 +1,25 @@
+<h1>Insert the form to create a new instance of your model.</h1>
+
+<form action="/books" method="post">
+  <p>
+    <label for="book_title">Title:</label><br>
+    <input type="text" name="book[title]" id="book_title">
+  </p>
+
+  <p>
+    <label for="book_volume">Volume:</label><br>
+    <input type="text" name="book[volume]" id="book_volume">
+  </p>
+
+  <p>
+    <label for="book_isbn">ISBN:</label><br>
+    <input type="text" name="book[isbn]" id="book_isbn">
+  </p>
+
+  <p>
+    <label for="book_description">Description:</label><br>
+    <textarea type="text" name="book[description]" id="book_description"></textarea>
+  </p>
+
+  <input type="submit" value="Criar livro">
+</form>
