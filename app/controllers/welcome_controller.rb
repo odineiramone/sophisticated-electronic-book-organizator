@@ -2,6 +2,6 @@ class BooksController < ApplicationController
 
   # GET: /books
   get "/" do
-    erb :"/welcome/index.html"
+    redirect "/books"
   end
 end

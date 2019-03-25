@@ -1,0 +1,14 @@
+<ul>
+  <% if @flash %>
+    <% @flash.each |type, message| %>
+      <% if message.class == String %>
+        <li><%= message %></li>
+      <% else %>
+        <li><%= message.key %></li>
+        <ul>
+          <li></li>
+        </ul>
+      <% end %>
+    <% end %>
+  <% end %>
+</ul>

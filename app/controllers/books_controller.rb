@@ -1,10 +1,13 @@
 class BooksController < ApplicationController
   get "/books" do
+    @flash = flash
+    flash = {}
     @books = Book.all
     erb :"/books/index.html"
   end
 
   get "/books/new" do
+    @book = Book.new
     erb :"/books/new.html"
   end
 
@@ -12,6 +15,9 @@ class BooksController < ApplicationController
     @book = Book.new params[:book]
 
     if @book.save
+      binding.pry
+
+      flash[:success] = 'Livro criado com sucesso'
       redirect "/books"
     else
       erb :"/books/new.html"
@@ -35,7 +41,7 @@ class BooksController < ApplicationController
     if @book.save
       redirect "/books/#{@book.id}"
     else
-      erb :"/books/new.html"
+      erb :"/books/edit.html"
     end
   end
 
