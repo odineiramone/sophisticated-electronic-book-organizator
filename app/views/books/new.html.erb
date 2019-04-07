@@ -3,22 +3,22 @@
 <form action="/books" method="post">
   <p>
     <label for="book_title">Title:</label><br>
-    <input type="text" name="book[title]" id="book_title">
+    <input type="text" name="book[title]" id="book_title" value="<%= @book.title %>">
   </p>
 
   <p>
     <label for="book_volume">Volume:</label><br>
-    <input type="text" name="book[volume]" id="book_volume">
+    <input type="text" name="book[volume]" id="book_volume" value="<%= @book.volume %>">
   </p>
 
   <p>
     <label for="book_isbn">ISBN:</label><br>
-    <input type="text" name="book[isbn]" id="book_isbn">
+    <input type="text" name="book[isbn]" id="book_isbn" value="<%= @book.isbn %>">
   </p>
 
   <p>
     <label for="book_description">Description:</label><br>
-    <textarea type="text" name="book[description]" id="book_description"></textarea>
+    <textarea type="text" name="book[description]" id="book_description" value="<%= @book.description %>"></textarea>
   </p>
 
   <input type="submit" value="Criar livro">
