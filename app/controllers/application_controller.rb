@@ -1,6 +1,8 @@
 require './config/environment'
 
 class ApplicationController < Sinatra::Base
+  register Sinatra::Flash
+
   configure do
     set :sessions, true
     set :session_secret, ENV['SESSION_SECRET']
@@ -10,13 +12,5 @@ class ApplicationController < Sinatra::Base
 
   get "/" do
     erb :welcome
-  end
-
-  def flash
-    session[:flash_messages] ||= {}
-  end
-
-  helpers do
-    include Rack::Utils
   end
 end

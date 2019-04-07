@@ -1,14 +1,5 @@
-<ul>
-  <% if @flash %>
-    <% @flash.each |type, message| %>
-      <% if message.class == String %>
-        <li><%= message %></li>
-      <% else %>
-        <li><%= message.key %></li>
-        <ul>
-          <li></li>
-        </ul>
-      <% end %>
-    <% end %>
-  <% end %>
-</ul>
+<% flash.keys.each do |type| %>
+  <div data-alert class="flash <%= type %> alert-box radius">
+    <%= flash[type] %>
+  </div>
+<% end %>
